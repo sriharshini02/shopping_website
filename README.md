@@ -1,4 +1,4 @@
-# Registration Project
+# Shopping_Website Project
 
 ## Description
 This project is a registration web application built with Java Servlets and MySQL. The application allows users to register by providing their username and password, which are then stored in a MySQL database.
