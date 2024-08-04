@@ -105,9 +105,12 @@
         .navbar {
             overflow: hidden;
             background-color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 10px;
         }
         .navbar a {
-            float: left;
             display: block;
             color: #f2f2f2;
             text-align: center;
@@ -125,6 +128,15 @@
             float: right;
             margin-right: 20px;
         }
+        .search-bar {
+            flex-grow: 1;
+            text-align: center;
+        }
+        .search-bar input[type="text"] {
+            width: 60%;
+            padding: 6px;
+            font-size: 16px;
+        }
     </style>
      <script type="text/javascript">
         window.onload = function() {
@@ -139,8 +151,16 @@
 </head>
 <body>
     <div class="navbar">
-        <a href="#home">Home</a>
-        <a href="#products">Products</a>
+        <a href="#"><img src="https://th.bing.com/th/id/OIG3.Ikg0zaMFyRbgrwSCFqMq?w=173&h=173&c=6&r=0&o=5&dpr=1.3&pid=ImgGn" alt="logo" width="50" height="30"></a>
+        <div class="search-bar">
+    <form action="search.jsp" method="get">
+        <input type="text" name="query" placeholder="Search...">
+        <input type="hidden" name="username" value="<%= username %>">
+        <input type="hidden" name="user_id" value="<%= userId %>">
+        <button type="submit">Search</button>
+    </form>
+</div>
+
         <div class="profile">
             <% if (username != null) { %>
                 <a href="profile.jsp?user_id=<%= userId %>">Profile: <%= username %></a>
@@ -156,7 +176,6 @@
             <% } %>
         </div>
     </div>
-
     <div class="container">
         <!-- Products listing -->
         <h1 style="color:#800080;"><b>Stationery</b></h1>
@@ -348,7 +367,7 @@
         <div class="product">
             <img src="https://m.media-amazon.com/images/I/51akzQvvIuL._SX679_.jpg" alt="vaccum cleaner">
             <div class="product-info">
-                <h3>Eureka Forbes Robo Vac N Mop NUO Wet & Dry Robotic Vacuum Cleaner</h3>
+                <h3>Eureka Forbes Robo Vac N Mop NUO Wet and Dry Robotic Vacuum Cleaner</h3>
                 <p>Gyroscope Navigation|App Based Control| Multisurface Cleaning Vacuum Cleaner</p>
                 
                 <p class="cost">Cost: Rs.15999</p>

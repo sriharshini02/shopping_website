@@ -77,7 +77,7 @@
             <input type="password" id="pass" name="pass" required/><br/>
             <input type="submit" value="Login" />
         </form>
-        <a href="Enter_details.html" class="register-link">Not registered? Sign up here</a>
+        <a href="Enter_details.html" class="register-link">Not registered? Register here</a>
     </div>
 </body>
 </html>
